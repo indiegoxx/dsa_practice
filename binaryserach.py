@@ -1,5 +1,5 @@
 
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+a = [1, 2, 3, 4, 5, 8, 6, 8, 9, 10, ]
 a.reverse()
 print(a)
 inp = (int)(input("enter the serach Item : "))
@@ -11,7 +11,7 @@ def bin_search(query, a):
     mid = -1
     ub = a.__len__()
     lb = 0
-    while(mid != 0 or mid == a.__len__()):
+    while(lb != ub):
         mid = (int)((ub + lb) / 2)
         print(f" iteration = {i}  mid = {mid}")
         i += 1
