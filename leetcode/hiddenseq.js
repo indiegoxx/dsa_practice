@@ -1,6 +1,9 @@
 var numberOfArrays = function(differences, lower, upper) {
     let hsCount = 0;
-    for(let i=lower;i<=upper;i++)
+    
+    let mid = (lower + upper)/2;
+    let rmid = mid; let lmid = mid;
+        for(i=rmid;i<=upper;i++)
         {
             let arr =[]
             arr.push(i);
@@ -19,12 +22,45 @@ var numberOfArrays = function(differences, lower, upper) {
                             break;
                         }
                 }
-            // console.log(flag)
+            
             if(flag == 0)
                 {
                     hsCount++;
                 }
+                else{
+                    break;
+                }
         }
+    // for(let i=lmid;i>=lower;i--)
+    //     {
+    //         let arr =[]
+    //         arr.push(i);
+    //         let flag = 0;
+    //         for(let idx =0;idx<differences.length;idx++)
+    //             {
+    //                 // console.log(differences[idx])
+    //                 let x = arr[idx] + differences[idx]
+    //                 arr.push(x)
+    //                 if(x >= lower && x <= upper)
+    //                 {
+    //                 }
+    //                 else
+    //                     {
+    //                         flag = -1
+    //                         break;
+    //                     }
+    //             }
+            
+    //         if(flag == 0)
+    //             {
+    //                 hsCount++;
+    //             }
+    //             else{
+    //                 break;
+    //             }
+    //     }
+    // console.log(lmid)
+
     return hsCount
 };
 
